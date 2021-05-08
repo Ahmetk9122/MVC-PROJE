@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrate
 {
-    class About
+    public class About
     {
         public int AboutID { get; set; }
         public string AboutDetails1 { get; set; }

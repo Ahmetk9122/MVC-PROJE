@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrate
 {
-    class Contact
+    public class Contact
     {
         public int ContactID { get; set; }
         public string UserName { get; set; }
