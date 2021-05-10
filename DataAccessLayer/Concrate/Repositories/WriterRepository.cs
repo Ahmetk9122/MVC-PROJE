@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrate.Repositories
 {
-    class WriterRepository : IWriterDal
+    public class WriterRepository : IWriterDal
     {
         Context c = new Context();
         DbSet<Writer> _object;
