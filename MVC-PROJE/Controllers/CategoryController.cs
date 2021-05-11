@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,12 @@ namespace MVC_PROJE.Controllers
             //var diyoruz çünkü tabloda alfabetik karakter sayı ve değişik karakterler işçerebilir oyüzden bunu kullanıyoruz.
             var categoryvalues = cm.GetAllBL();
             return View(categoryvalues);
+        }
+        public ActionResult AddCategory(Category p)
+        {
+            cm.CategoryAddBL(p);
+            return RedirectToAction("GetCategoryList");
+            
         }
     }
 }
