@@ -19,8 +19,8 @@ namespace MVC_PROJE.Controllers
         public ActionResult GetCategoryList()
         {
             //var diyoruz çünkü tabloda alfabetik karakter sayı ve değişik karakterler işçerebilir oyüzden bunu kullanıyoruz.
-            var categoryvalues = cm.GetAllBL();
-            return View(categoryvalues);
+          //  var categoryvalues = cm.GetAllBL();
+            return View();
         }
         [HttpGet]
         public ActionResult AddCategory()
@@ -31,7 +31,7 @@ namespace MVC_PROJE.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-            cm.CategoryAddBL(p);
+          //  cm.CategoryAddBL(p);
             return RedirectToAction("GetCategoryList");
             
         }
