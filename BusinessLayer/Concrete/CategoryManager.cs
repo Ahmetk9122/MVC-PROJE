@@ -20,8 +20,13 @@ namespace BusinessLayer.Concrete
             _categorydal = categorydal;
         }
 
+        public void CategoryAddBL(Category category)
+        {
+            _categorydal.Insert(category);
+        }
+
         //depency injection
-    
+
         public List<Category> GetList()
         {
             return _categorydal.List();
