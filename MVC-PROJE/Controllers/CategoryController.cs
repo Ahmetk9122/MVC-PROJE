@@ -44,7 +44,7 @@ namespace MVC_PROJE.Controllers
             if (results.IsValid)
             {
                 //cm EfCategoryDal a göre türetrmiş olduğumuz categorymanager sınıfındaki nesne.
-                cm.CategoryAddBL(p);
+                cm.CategoryAdd(p);
                 return RedirectToAction("GetCategoryList");
 
             }

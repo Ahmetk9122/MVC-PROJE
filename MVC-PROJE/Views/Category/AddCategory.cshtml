@@ -1,4 +1,4 @@
-﻿
+﻿@model EntityLayer.Concrate.Category
 @{
     Layout = null;
 }
@@ -6,10 +6,28 @@
 
 <h1>Yeni Kategori Ekleme Sayfası</h1>
 <br />
-<form method="post" class="form-group">
-    <input type="text" name="CategoryName" class="form-group" placeholder="kategori adı" />
-    <br />
-    <input type="text" name="CategoryDescription" class="form-group" placeholder="kategori açıklama" />
-    <br />
-    <button class="btn btn-primary">Ekle</button>
-</form>
+
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.Label("Kategori Adı")
+    @*input yerine textboxfor kullanılacak.*@
+    @Html.TextBoxFor(x => x.CategoryName)
+    @Html.ValidationMessageFor(x => x.CategoryName)
+    <br /><br />
+    @Html.Label("Açıklamayı Yazınız")
+    @Html.TextBoxFor(x => x.CategoryDescription)
+    @Html.ValidationMessageFor(x => x.CategoryDescription)
+
+    <br /><br />
+    <button class="btn btn-primary">Kaydet</button>
+</div>
+}
+
+@*<form method="post" class="form-group">
+        <input type="text" name="CategoryName" class="form-group" placeholder="kategori adı" />
+        <br />
+        <input type="text" name="CategoryDescription" class="form-group" placeholder="kategori açıklama" />
+        <br />
+        <button class="btn btn-primary">Ekle</button>
+    </form>*@
