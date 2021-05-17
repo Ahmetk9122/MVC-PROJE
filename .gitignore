@@ -92,7 +92,6 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scss
-*.ts
 *.scc
 
 # Chutzpah Test files
