@@ -75,6 +75,11 @@ StyleCopReport.xml
 *.rsp
 *.sbr
 *.tlb
+*.jpg
+*.png
+*.gif
+*.svg
+*.ico
 *.tli
 *.tlh
 *.tmp
@@ -86,6 +91,8 @@ StyleCopReport.xml
 .builds
 *.pidb
 *.svclog
+*.scss
+*.ts
 *.scc
 
 # Chutzpah Test files
