@@ -11,5 +11,6 @@ namespace BusinessLayer.Abstracy
     {
         List<Category> GetList();
         void CategoryAdd(Category category);
+        Category GetByID(int id);
     }
 }
