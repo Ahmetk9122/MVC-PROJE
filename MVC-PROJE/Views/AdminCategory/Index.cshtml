@@ -8,22 +8,21 @@
 <br />
 <table class="table table-hover">
     <tr>
-        <th>ID</th>
+        <th>#</th>
         <th>Kategori Adı</th>
-        <!-- <th>Açıklama</th>-->
-        <th>Durum</th>
-        @*<th>Güncelle</th>*@
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Başlıklar</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.CategoryID</td>
+            <th>@item.CategoryID</th>
             <td>@item.CategoryName</td>
-
-            <td>@item.CategoryStatus</td>
-            @*<td><button class="btn btn-success">Güncelle</button></td>*@
+            <td><button class="btn btn-danger">Sil</button></td>
+            <td><button class="btn btn-warning">Güncelle</button></td>
+            <td><button class="btn btn-primary">Başlıklar</button></td>
         </tr>
     }
 </table>
-<br />
-<a href="/Category/AddCategory" class="btn btn-danger">Yeni Kategori</a>
+<a href="/AdminCategory/AddCategory" class="btn btn-danger">Yeni Kategori</a>
