@@ -13,6 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StatisticsView", "StatisticsView", "{7D316A44-2CB4-4539-B3C4-11B31E720C95}"
 	ProjectSection(SolutionItems) = preProject
+		.gitkeep = .gitkeep
 		..\..\..\Desktop\istatistik.PNG = ..\..\..\Desktop\istatistik.PNG
 	EndProjectSection
 EndProject
