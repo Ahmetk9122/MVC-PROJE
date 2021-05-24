@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        .card-header{
+            text-align:center;
+        }
+       h5
+       {
+           color:whitesmoke
+       }
+    </style>
+</head>
+<body>
+</html>
+<h1 style="margin-top: -30px;">İstatistik Sayfası</h1>
+<br />
+
+
+<div>
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="card text-white  mb-3" style="background-color: #de8971">
+                <div class="card-header"> Toplam Kategori Sayısı </div>
+                <div class="card-body">
+                    <h5 class="card-title"><b> @ViewBag.d1 </b></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white mb-3" style="background-color: #A7D0CD">
+                <div class="card-header"><b> İsminde "A" Harfi Olan Yazar Sayısı</b> </div>
+                <div class="card-body">
+                    <h5 class="card-title"><b> @ViewBag.d3 </b></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white mb-3" style="background-color: #7B6079">
+                <div class="card-header"> Yazılım Kategorisine Ait Başlık Sayısı </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align:center;"><b> @ViewBag.d2 </b></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white mb-3" style="background-color: #AFB9C8">
+                <div class="card-header"> En Fazla Başlığa Sahip Kategori </div>
+                <div class="card-body">
+                    <h5 class="card-title"><b> @ViewBag.d4 </b></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card text-white mb-3" style="background-color: #F4A9A8">
+                <div class="card-header"> True - False Farkı </div>
+                <div class="card-body">
+                    <h5 class="card-title"><b> @ViewBag.d5 </b></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
