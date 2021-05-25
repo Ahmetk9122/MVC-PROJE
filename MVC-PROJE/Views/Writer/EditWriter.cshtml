@@ -1,17 +1,20 @@
 ﻿@model EntityLayer.Concrate.Writer
 @{
-    ViewBag.Title = "AddWriter";
+    ViewBag.Title = "EditWriter";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Yeni Yazar Ekleme</h2>
-<br />
-@using(Html.BeginForm("AddWriter","Writer",FormMethod.Post))
+<h2>Yazar Düzenleme Sayfası</h2>
+@using (Html.BeginForm("EditWriter","writer",FormMethod.Post))
 {
 <div class="form-group">
+    @Html.Label("Yazar ID")
+    @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
+
+    <br />
     @Html.Label("Yazar Adı")
     @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.WriterName)
+    @Html.ValidationMessageFor(x => x.WriterName, "", new { @class = "text-danger" })
     <br />
     @Html.Label("Yazar Soyadı")
     @Html.TextBoxFor(x => x.WriterSurName, new { @class = "form-control" })
@@ -21,7 +24,7 @@
     @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
 
     <br />
-    @Html.Label("Yazar Şifre")
+    @Html.Label("Yazar Şifre")s
     @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterPassword)
     <br />
@@ -33,7 +36,7 @@
     @Html.TextBoxFor(x => x.WriterPhone, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterPhone)
     <br />
-    @Html.Label("Yazar Görsel Linki")
+    @Html.Label("Yazar Unvan")
     @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterTitle)
     <br />
@@ -41,7 +44,6 @@
     @Html.TextBoxFor(x => x.WriterImage, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterImage)
     <br />
-    <button class="btn btn-success">Yazar Ekle</button>
+    <button class="btn btn-success">Değişikliği Kaydet</button>
 </div>
 }
-
