@@ -17,6 +17,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.WriterSurName).NotEmpty().WithMessage("Yazar Soyadı Boş Geçilemez.");
             RuleFor(x => x.WriterDiscription).Must(IsAboutValid).WithMessage("Hakkında kısmında en az bir defa a harfi kullanılmalıdır");
             RuleFor(x => x.WriterImage).MaximumLength(100).WithMessage("Resim alanı boş geçilemez.");
+            RuleFor(x => x.WriterTitle).MaximumLength(20).WithMessage("Unvan kısmını boş geçemezsniz");
             RuleFor(x => x.WriterPassword).MaximumLength(20).WithMessage("Parola Alanı Boş Geçilemez");
             RuleFor(x => x.WriterPhone).MaximumLength(20).WithMessage("Telefon alanı Boş Geçilemez");
 
