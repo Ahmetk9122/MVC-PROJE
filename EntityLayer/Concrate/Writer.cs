@@ -15,6 +15,10 @@ namespace EntityLayer.Concrate
         public string WriterName { get; set; }
         [StringLength(50)]
         public string WriterSurName { get; set; }
+        [StringLength(50)]
+        public string WriterDiscription { get; set; }
+        [StringLength(50)]
+        public string WriterPhone { get; set; }
         [StringLength(100)]
         public string WriterImage { get; set; }
         [StringLength(100)]
