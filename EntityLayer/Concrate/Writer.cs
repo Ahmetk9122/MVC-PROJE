@@ -19,7 +19,7 @@ namespace EntityLayer.Concrate
         public string WriterDiscription { get; set; }
         [StringLength(50)]
         public string WriterPhone { get; set; }
-        [StringLength(100)]
+        [StringLength(250)]
         public string WriterImage { get; set; }
         [StringLength(200)]
         public string WriterMail { get; set; }
