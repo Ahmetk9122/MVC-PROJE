@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrate.Heading
+@{
+    ViewBag.Title = "EditHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="margin-top:-25px;">Başlık Güncelleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("EditHeading", "Heading", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.Label("Başlık ID")
+        @*input yerine textboxfor kullanılacak.*@
+        @Html.TextBoxFor(x => x.HeadingName , new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori Seçin")
+        @Html.DropDownListFor(x => x.CategoryID,(List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Kaydet</button>
+    </div>
+}
