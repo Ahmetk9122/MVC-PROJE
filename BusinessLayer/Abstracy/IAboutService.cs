@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstracy
 {
-    public interface IAboutService
+     public interface IAboutService
     {
         List<About> GetList();
-        void CategoryAdd(About about);
+        void AboutAdd(About about);
         About GetByID(int id);
 
         void AboutDelete(About about);
