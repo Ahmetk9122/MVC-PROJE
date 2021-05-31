@@ -47,8 +47,11 @@
                             <th style="width: 20%">
                                 Başlık Adı
                             </th>
-                            <th style="width: 30%">
+                            <th style="width: 15%">
                                 Oluşturan Yazar
+                            </th>
+                            <th style="width: 10%">
+                                  Durum
                             </th>
                             <th style="width: 8%" class="text-center">
                                 Kategori
@@ -105,6 +108,17 @@
                                         </li>
                                     </ul>
                                 </td>
+                                <td >
+                                    @if (x.HeadingStatus == true)
+                                    {
+                                        <a href="#" class="btn btn-success btn-xs " style="cursor:pointer;">Active</a>
+                                        
+                                    }
+                                    else
+                                    {
+                                <a href="#" class="btn btn-warning btn-xs" style="cursor:pointer;">Passive</a>
+                                    }
+                                </td>
                                 <td class="project-state">
                                     <span class="@color">@x.Category.CategoryName</span>
                                 </td>
@@ -120,10 +134,24 @@
                                         </i>
                                         Düzenle
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="#">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        Sil
+                                    <a class="" href="/Heading/DeleteHeading/@x.HeadingID">
+
+                                        @if (x.HeadingStatus == true)
+                                        {
+
+                                            <span class="btn btn-warning btn-sm">
+                                                <i class="fas fa-trash">
+                                                </i> Pasif Yap
+                                            </span>
+
+                                        }
+                                        else
+                                        {
+                                            <span class="btn btn-success btn-sm">
+                                                <i class="fas fa-trash">
+                                                </i> Aktif Yap
+                                            </span>
+                                        }
                                     </a>
                                 </td>
                             </tr>

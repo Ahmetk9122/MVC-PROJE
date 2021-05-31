@@ -10,16 +10,25 @@
 @using (Html.BeginForm("EditHeading", "Heading", FormMethod.Post))
 {
 
-    <div class="form-group">
-        @Html.Label("Başlık ID")
-        @*input yerine textboxfor kullanılacak.*@
-        @Html.TextBoxFor(x => x.HeadingName , new { @class = "form-control" })
-        <br />
-        @Html.Label("Kategori Seçin")
-        @Html.DropDownListFor(x => x.CategoryID,(List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
-        <br />
-        <button class="btn btn-success">Kaydet</button>
-    </div>
+<div class="form-group">
+    @Html.Label("Başlık ID")
+    @Html.TextBoxFor(x => x.HeadingID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık Adı")
+    @*input yerine textboxfor kullanılacak.*@
+    @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.HeadingDate, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yazar ID")
+    @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori Seçin")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Kaydet</button>
+</div>
 }
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,6 +36,6 @@
     <title></title>
 </head>
 <body>
-    <span style="text-align:center">NETWORK SYSTEM SUPPORT</span><br />Part time
+   
 </body>
 </html>
