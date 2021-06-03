@@ -1,6 +1,7 @@
 ﻿
 using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,24 @@ namespace MVC_PROJE.Controllers
         // GET: Message
         public ActionResult Inbox()
         {
-            var messagelist = cm.GetList();
+            var messagelist = cm.GetListInbox();
             return View(messagelist);
+        }
+        public ActionResult Sendbox()
+        {
+            var messagelist = cm.GetListSendbox();
+            return View(messagelist);
+        }
+        [HttpGet]
+        public ActionResult NewMessage ()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewMessage(Message p)
+        {
+
+            return View();
         }
     }
 }
