@@ -1,9 +1,10 @@
 ﻿@using EntityLayer.Concrate
 @model List<Message>
 @{
-    ViewBag.Title = "Inbox";
+    ViewBag.Title = "Sendbox";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 
 <!DOCTYPE html>
 <html>
@@ -30,7 +31,7 @@
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Kişisel Gelen Mesajlar</h3>
+                        <h3 class="card-title">Gönderilen Mesajlar</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Mail Kutusunda Ara">
@@ -80,9 +81,9 @@
                                                 </div>
                                             </td>
                                             <td class="mailbox-star"><a href="/Contact/GetContactDetails/@x.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Contact/GetContactDetails/@x.MessageID">@x.SenderMail </a></td>
+                                            <td class="mailbox-name"><a href="/Contact/GetContactDetails/@x.MessageID">@x.ReceiverMail </a></td>
                                             <td class="mailbox-subject">
-                                                <b>@x.Subject</b> - @x.MessageContent.Substring(0,30)...
+                                                <b>@x.Subject</b> - @x.MessageContent.Substring(0,50) ...
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">5 mins ago</td>
