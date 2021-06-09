@@ -22,6 +22,7 @@ namespace DataAccessLayer.Concrate
         public DbSet<Writer>    Writers  { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<imageFile> imageFiles { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
     }
 }
