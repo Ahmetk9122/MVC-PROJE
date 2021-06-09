@@ -31,8 +31,8 @@
 
             <div class="container-fluid photos">
                 <div class="row align-items-stretch">
-                  @foreach (var x in Model)
-                  {
+                    @foreach (var x in Model)
+                    {
                         <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
                             <a href="@x.ImagePath" class="d-block photo-item" data-fancybox="gallery">
                                 <img src="@x.ImagePath" />
@@ -41,7 +41,7 @@
                                 </div>
                             </a>
                         </div>
-                  }
+                    }
                 </div>
             </div>
 
