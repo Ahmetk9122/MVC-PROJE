@@ -121,24 +121,10 @@
                                         </i>
                                         Düzenle
                                     </a>
-                                    <a class="" href="/Heading/DeleteHeading/@x.HeadingID">
-
-                                        @if (x.HeadingStatus == true)
-                                        {
-
-                                            <span class="btn btn-warning btn-sm">
-                                                <i class="fas fa-trash">
-                                                </i> Pasif Yap
-                                            </span>
-
-                                        }
-                                        else
-                                        {
-                                            <span class="btn btn-success btn-sm">
-                                                <i class="fas fa-trash">
-                                                </i> Aktif Yap
-                                            </span>
-                                        }
+                                    <a class="btn btn-danger btn-sm" href="/WriterPanel/DeleteHeading/@x.HeadingID">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Sil
                                     </a>
                                 </td>
                             </tr>
