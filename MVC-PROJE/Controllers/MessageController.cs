@@ -63,7 +63,6 @@ namespace MVC_PROJE.Controllers
                 }
             }
             return View();
-            return View();
         }
     }
 }
