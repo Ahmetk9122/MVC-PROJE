@@ -312,6 +312,7 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\Images\9d24160641bb6c6e78f283b3aa7ab656.png" />
     <Content Include="AdminLTE-3.0.4\Images\pexels-ave-calvar-martinez-4835959.jpg" />
     <Content Include="AdminLTE-3.0.4\Images\pexels-oleg-prachuk-8125509.jpg" />
     <Content Include="AdminLTE-3.0.4\Images\pexels-oleg-prachuk-8125615.jpg" />
@@ -2440,6 +2441,9 @@
     <Content Include="Views\WriterPanelMessage\Inbox.cshtml" />
     <Content Include="Views\WriterPanelMessage\MessageListMenu.cshtml" />
     <Content Include="Views\WriterPanelMessage\Sendbox.cshtml" />
+    <Content Include="Views\WriterPanelMessage\GetInboxMessageDetails.cshtml" />
+    <Content Include="Views\WriterPanelMessage\GetSendBoxMessageDetails.cshtml" />
+    <Content Include="Views\WriterPanelMessage\NewMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
