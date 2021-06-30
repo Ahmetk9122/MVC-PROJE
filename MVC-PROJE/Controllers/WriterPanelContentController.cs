@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace MVC_PROJE.Controllers
 {
-    public class WriterPanelContent : Controller
+    public class WriterPanelContentController : Controller
     {
         ContentManager cm = new ContentManager(new EfContentDal());
         // GET: WriterPanelContent
