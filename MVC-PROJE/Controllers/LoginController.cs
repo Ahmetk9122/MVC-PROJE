@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace MVC_PROJE.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
