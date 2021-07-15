@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrate;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrate;
 using System;
@@ -13,22 +14,28 @@ namespace MVC_PROJE.Controllers
     {
         HeadingMenager hm = new HeadingMenager(new EfHeadingDal());
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
+        Context c = new Context();
+       
+
         // GET: WriterPanel
         public ActionResult WriterProfile()
         {
 
             return View();
         }
-        public ActionResult MyHeading ()
+        public ActionResult MyHeading (string p )
         {
-          //  id = 4;
-            var values = hm.GetListByWriter();
+            Context c = new Context();
+            p = (string)Session["WriterMail"];
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == p).Select(y => y.WriterID).FirstOrDefault();
+            var values = hm.GetListByWriter(writeridinfo);
             return View(values);
 
         }
         [HttpGet]
         public ActionResult NewHeading()
         {
+           
             //Dropdown olayının backend kısmı 
             List<SelectListItem> valueCategory = (from x in cm.GetList()
                                                   select new SelectListItem
@@ -42,8 +49,10 @@ namespace MVC_PROJE.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading p)
         {
+            string writermailinfo = (string)Session["WriterMail"];
+            var writeridinfo = c.Writers.Where(x => x.WriterMail == writermailinfo).Select(y => y.WriterID).FirstOrDefault();
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-            p.WriterID = 4;
+            p.WriterID = writeridinfo;
             p.HeadingStatus = true;
             hm.HeadingAdd(p);
             return RedirectToAction("MyHeading");
@@ -51,6 +60,7 @@ namespace MVC_PROJE.Controllers
         [HttpGet]
         public ActionResult EditHeading(int id)
         {
+            
             List<SelectListItem> valueCategory = (from x in cm.GetList()
                                                   select new SelectListItem
                                                   {
